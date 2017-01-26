@@ -24,7 +24,11 @@ int main(int argc,  char **argv){
 		return(1);
 	}
 
-	char *sql_stmt = "select Airline_ID from routes except select DISTINCT r1.Airline_ID from routes r1, routes r2 where r1.Airline_ID = r2.Airline_ID and r1.Destination_airport_ID = r2.Source_airport_ID and r1.Source_airport_ID = r2.Destination_airport_ID;";
+	char *sql_stmt = "select r.Airline_ID from routes r, airlines a where r.airline_ID = a.airline_ID and a.Active = 'Y'\
+	except\
+	select DISTINCT r1.Airline_ID\
+	from routes r1, routes r2\
+	where r1.Airline_ID = r2.Airline_ID and r1.Destination_airport_ID = r2.Source_airport_ID and r1.Source_airport_ID = r2.Destination_airport_ID;";
 
 	rc = sqlite3_prepare_v2(db, sql_stmt, -1, &stmt, 0);
 
