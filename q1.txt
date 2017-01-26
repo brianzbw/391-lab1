@@ -1,0 +1,13 @@
+create table airports(Airpost_ID int,Name text,City text,Country text,IATA text,ICAO text,Latitude real,Longitude real,Altitude real,Timezone real,DST text,Tz_ database_time_zone text);
+
+create table airlines(Airline_ID int, Name text, Alias text, IATA text, ICAO text, Callsign text, Country text, Active text);
+
+create table routes(Airline text, Airline_ID int, Source_airport text, Source_airport_ID int, Destination_airport text, Destination_airport_ID int, Codeshare text, Stops int, Equipment text);
+
+.mode csv
+.import airports.dat airports;
+.import airlines.dat airlines;
+.import routes.dat routes;
+
+delete from routes where Stops >0;
+
