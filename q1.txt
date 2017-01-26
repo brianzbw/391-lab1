@@ -9,5 +9,6 @@ create table routes(Airline text, Airline_ID int, Source_airport text, Source_ai
 .import airlines.dat airlines;
 .import routes.dat routes;
 
+
 delete from routes where Stops >0;
 
