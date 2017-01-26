@@ -1,4 +1,4 @@
-create table airports(Airpost_ID int PRIMARY KEY,Name text,City text,Country text,IATA text,ICAO text,Latitude real,Longitude real,Altitude real,Timezone real,DST text,Tz_ database_time_zone text);
+create table airports(Airport_ID int PRIMARY KEY,Name text,City text,Country text,IATA text,ICAO text,Latitude real,Longitude real,Altitude real,Timezone real,DST text,Tz_ database_time_zone text);
 
 create table airlines(Airline_ID int PRMARY KEY, Name text, Alias text, IATA text, ICAO text, Callsign text, Country text, Active text);
 
