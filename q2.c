@@ -29,7 +29,7 @@ int main(int argc,  char **argv){
 	except\
 	select r1.Airline_ID,r1.source_airport, r1.destination_airport\
 	from routes r1, routes r2, airlines a\
-	where r1.Airline_ID = r2.Airline_ID and r1.airline_ID = a.airline_ID and\ r1.Destination_airport_ID = r2.Source_airport_ID and r1.Source_airport_ID = r2.Destination_airport_ID;";
+	where r1.Airline_ID = r2.Airline_ID and r1.airline_ID = a.airline_ID and r1.Destination_airport_ID = r2.Source_airport_ID and r1.Source_airport_ID = r2.Destination_airport_ID;";
 
 	rc = sqlite3_prepare_v2(db, sql_stmt, -1, &stmt, 0);
 
