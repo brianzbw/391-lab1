@@ -36,7 +36,7 @@ int main(int argc, char **argv){
 	printf("enter id: ");
 	scanf("%s",input_id);
 
-	sqlite3_bind_text(stmt_q, 1, input_id, -1, SQLITE_STATIC);
+	sqlite3_bind_text(stmt_q, 1, input_id, -1, SQLITE_STATIC); //http://www.adp-gmbh.ch/sqlite/bind_insert.html
 
 	print_result(stmt_q);
 	// always reset the compiled statement and clear the bindings
