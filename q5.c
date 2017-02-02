@@ -7,7 +7,10 @@
 #define f 1/298.257223563
 #define ER 6378137
 
-
+/*Bowen ZHu
+part of the code used from eclass:
+https://sites.ualberta.ca/~denilson/files/cmput391/sample_code/select.c
+*/
 
 
 
